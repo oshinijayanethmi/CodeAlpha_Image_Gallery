@@ -1,0 +1,133 @@
+/* General body styles */
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9ecec;
+    color: #0c0707;
+    text-align: center;
+}
+
+/* Gallery container styling */
+.gallery-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Gallery grid styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Gallery item styling */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+/* Gallery item image styling */
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Gallery item hover effects */
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation buttons styling */
+.nav-buttons {
+   
+    margin: 40px 0;
+}
+
+.nav-buttons button {
+    
+    margin-top: 650px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons button:active {
+    background-color: #004080;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Fullscreen view styling */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Fullscreen view active class */
+.fullscreen.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fullscreen image styling */
+.fullscreen-image {
+    margin-left: 200px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
